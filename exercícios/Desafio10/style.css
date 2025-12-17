@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body{
+    background-color: #7da490;
+}
+main{ background-color: #ffffff;
+    border-radius: 8px;
+    
+    margin: auto;
+    max-width: 800px;
+    padding: 1px 20px;
+}
+picture img {
+    max-width: 100%;
+    height: auto;
+}
+picture {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+}

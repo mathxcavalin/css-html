@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>tente abrir esse site em dispositivos diferentes ou altere o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="fotos_p_m_g_gg/p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="fotos_p_m_g_gg/m.png" type="image/png">
+        <img src="fotos_p_m_g_gg/g.png" alt="imagem flexível">
+    </picture>
+    <h1>Reprodução de aúdios</h1>
+    <p>vamos aprender a colocar aúdio nos nossos sites em HTML5</p>
+    <audio src="happymistake.mp3" controls autoplay></audio>
+    <!--MP3 WAV OGG-->
+
+    <audio preload="metadata" autoplay controls>
+        <source src="happymistake.mp3" type="audio/mpeg">
+        <source src="happymistake.ogg" type="audio/ogg">
+        <source src="happymistake.wav" type="audio/wav">
+        <p>infelizmente seu navegador não é capaz de carregar esse aúdio</p>
+    </audio>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(55, 55, 55);
+    color: rgb(213, 213, 213);
+    font: normal 1em Arial, Helvetica, sans-serif; 
+}
+h1{
+    font-style: italic;
+    color: rgb(27, 170, 202);
+    text-align: center;
+    text-decoration: underline;
+}
+h2{
+    color: rgb(255, 158, 158);
+    text-align: center;
+}
+p{
+    text-align: justify;
+}
+h1#h1principal{
+    font-size: 3em;
+    color: rgb(55, 55, 55);
+    background-color: rgb(171, 171, 171);
+    text-align: center;
+    margin: auto;
+    border-radius: 50px;
+    text-shadow:3px 3px 6px rgba(55, 55, 55, 0.375);
+    text-decoration: none;
+}
+
+.avançados{
+    color: rgb(44, 229, 23);
+}
+.intermediarios{
+    color: rgb(237, 228, 49);
+}
+.basicos{
+    color: rgb(243, 40, 40);
+}

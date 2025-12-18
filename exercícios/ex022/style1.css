@@ -1,14 +1,14 @@
+@charset "UTF-8";
+
+
 body{
-    background-color: rgb(40, 39, 39);
-    background-image: url(imagens/wallpaper002.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    
     height: 97vh;
-    background-attachment: fixed;
+    background: rgb(164, 161, 161) url(imagens/wallpaper002.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 main{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     max-width: 650px;
     padding: 15px;
     margin: auto;

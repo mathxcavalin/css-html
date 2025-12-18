@@ -5,10 +5,11 @@ body{
     background-position: center center;
     background-size: cover;
     height: 97vh;
+    background-attachment: fixed;
 }
 main{
     background-color: white;
-    width: 450px;
+    max-width: 500px;
     padding: 1px 10px;
     margin: auto;
     text-align: justify;

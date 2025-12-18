@@ -1,0 +1,14 @@
+div.quadrado{
+    border: 1px solid black;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    border-radius: 50%;
+}
+
+div#um{
+    background-image: url('../imagens/fundo001.jpg');
+    background-size: cover;
+    background-position: center;
+}

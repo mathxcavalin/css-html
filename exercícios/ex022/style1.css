@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(40, 39, 39);
+    background-image: url(imagens/wallpaper002.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 97vh;
+}
+main{
+    background-color: white;
+    width: 450px;
+    padding: 1px 10px;
+    margin: auto;
+    text-align: justify;
+}

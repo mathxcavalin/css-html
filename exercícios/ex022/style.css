@@ -1,14 +1,21 @@
 div.quadrado{
     border: 1px solid black;
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 500px;
     background-color: bisque;
     border-radius: 50%;
+    margin: 20px;
 }
 
 div#um{
-    background-image: url('../imagens/fundo001.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: rgb(26, 146, 186);
+}
+div#dois{
+    background-image: linear-gradient(to bottom, orange, red);
+}
+
+div#tres{
+    background-image: url('imagens/wallpaper001.jpg');
+    
 }

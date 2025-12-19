@@ -43,6 +43,10 @@ header a {
     font-family: var(--fontepadrao);
 }
 
+header a:hover {
+    text-decoration: underline;
+}
+
 section {
     font-family: var(--fontepadrao);
     font-size: 1.2em;

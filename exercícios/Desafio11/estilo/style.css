@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --cor-primaria: #000000;
+    --cor-secundaria: #FFFFFF;
+    
+    --fontedestaque: Verdana, Geneva, Tahoma, sans-serif;
+    --fontepadrao: 'Arial', sans-serif;
+}
+
+body{
+    background: rgb(255, 255, 255) url(imagens/natureza.jpg) no-repeat center center fixed;
+}
+
+header {
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 50px;
+    margin-bottom: 10px;
+}
+
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: var(--fontedestaque);
+}
+
+header p {
+    font-family: var(--fontepadrao);
+}
+
+header a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-family: var(--fontepadrao);
+}
+
+section {
+    font-family: var(--fontepadrao);
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+section p{
+    margin-left: 30px;
+}
+
+section.natureza {
+    background: var(--cor-secundaria) url(../imagens/natureza.jpg)  no-repeat center center fixed;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    margin: 20px 0px;
+}
+
+section.cartas {
+    background: var(--cor-secundaria) url(../imagens/cartas.jpg) no-repeat center center fixed;
+    margin: 20px 0px;
+    position: relative;
+    height: 500px;
+    background-size: cover;
+}
+
+section.natureza p{
+    background-color: #0000003c;
+    color: var(--cor-secundaria);
+    text-shadow: 2px 1px 0px black;
+    padding: 10px;
+    height: 260px;
+    width: 240px;
+    margin-left: 20px;
+    margin-top: 100px;
+    position: absolute;
+    font-family: var(--fontepadrao);
+}
+
+section.cartas p{
+
+    width: 240px;
+    height: 260px;
+    margin-left: 20px;
+    margin-top: 100px;
+    padding: 10px;
+    color: var(--cor-secundaria);
+    text-shadow: 2px 1px 0px black;
+    position: absolute;
+    font-family: var(--fontepadrao);
+    background-color: #0000003c;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fontepadrao);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -6,12 +6,22 @@
     <title>Tabela</title>
     <style>
         table{
-            width: 300px;
+            width: 400px;
             border-collapse: collapse;
+            height: 300px;
         }
         td{
             border: black 1px solid;
             padding: 06px;
+            text-align: right;
+            vertical-align: bottom;
+        }
+        .esqcima{
+            vertical-align: top;
+            text-align: left;
+        }
+        .meio{
+            vertical-align: middle;
             text-align: center;
         }
     </style>
@@ -22,18 +32,18 @@
     <table>
         <tr>
             <td>a1</td>
-            <td>a2
-            <td>a3</td>
+            <td class="meio">a2
+            <td class="meio">a3</td>
         </tr>
         <tr>
-            <td>b1
-            <td>b2</td>
-            <td>b3
+            <td class="meio">b1
+            <td class="meio">55</td>
+            <td class="meio">b3
         </tr>
         <tr>
-            <td>c1</td>
-            <td>c2
-            <td>c3</td>
+            <td class="meio">c1</td>
+            <td class="meio">c2
+            <td class="esqcima">c3</td>
         </tr>
     </table>
 

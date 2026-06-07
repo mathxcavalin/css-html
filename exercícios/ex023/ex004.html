@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 600px;
+            height: 180px;
+            margin: auto;
+        }
+        td, th{
+            border: 1px solid black;
+            width: 150px;
+        }
+        thead{
+            
+            height: 40px;
+            background-color: rgb(0, 255, 170);
+        }
+        td{
+            padding-left: 05px;
+        }
+        #mulheres{
+            background-color: rgb(240, 154, 236);
+        }
+        #homens{
+            background-color: rgb(144, 144, 236);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="2">Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="2" id="mulheres">Mulheres</th>
+                <td>Ana</td>
+                <td>Vingadores</td>
+                <td>Big Hero</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>Toy Story</td>
+                <td>Homem-Aranha</td>
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2" id="homens">Homens</th>
+                <td>João</td>
+                <td>Matrix</td>
+                <td>Divertidamente</td>
+            </tr>
+            <tr>
+                <td>Clóvis</td>
+                <td>Rio</td>
+                <td>Carros</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

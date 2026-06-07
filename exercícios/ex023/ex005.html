@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Notas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 700px;
+            height: 150px;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        td, th{
+            border: 1px solid black;
+
+        }
+        thead{
+            background-color: gray;
+            color: white;
+        }
+        #materia{
+            padding-left: 5px;
+        }
+        #area{
+            background-color: rgb(207, 207, 207);
+        }
+        .medias{
+            background-color: aquamarine;
+            text-align: center;
+        }
+        input{
+            width: 50px;
+            margin: auto;
+            display: block;
+            border: none;
+            font-size: 1em;
+        }
+        .notaF{
+            text-align: center;
+        }button{
+            border: none;
+            background-color: rgb(248, 98, 98);
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        #resp{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th scope="col" rowspan="2" >Média</th>
+                <th scope="col" rowspan="2">Verificar</th>
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2" scope="rowgroup" id="area">Exatas</th>
+                <td id="materia">Matemática</td>
+                <td>
+                    <input type="number" name="" id="mathNota1" placeholder="0" min="0" max="10">
+                </td>
+                <td>
+                    <input type="number" name="" id="mathNota2" placeholder="0" min="0" max="10">
+                </td>
+                <td id="respMediaMath" class="notaF">0</td>
+                <td>
+                    <button onclick="calcularMath()">Calcular</button>
+                </td>
+            </tr>
+            <tr>
+                <td id="materia">Biologia</td>
+                <td>
+                    <input type="number" name="" id="bioNota1" placeholder="0" min="0" max="10">
+                </td>
+                <td>
+                    <input type="number" name="" id="bioNota2" placeholder="0" min="0" max="10">
+                </td>
+                <td class="notaF" id="respNotaBio">0</td>
+                <td>
+                    <button onclick="calcularBio()">Calcular</button>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4" scope="row" class="medias">Média de Exatas</th>
+                <td id="notaExatas" class="medias">0</td>
+                <td>
+                    <button onclick="calcularMediaExatas()">
+                        Calcular
+                    </button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <p id="resp"></p>
+    <script>
+
+        function calcularMath(){
+            let mathNota1 = Number(document.getElementById('mathNota1').value)
+            let mathNota2 = Number(document.getElementById('mathNota2').value)
+            let response = document.getElementById('resp')
+
+
+            if(mathNota1>10 || mathNota2>10 ){
+                resp.innerHTML = `Coloque um número válido, entre 0 e 10`
+                mathNota1.value.focus()
+                
+            } else if (mathNota1<0 || mathNota2<0){
+                resp.innerHTML = `Coloque um número válido, entre 0 e 10`
+
+            } else {
+                let mediaMath = (mathNota1+mathNota2)/2
+                let respMedia = document.getElementById('respMediaMath')
+                respMedia.innerHTML = mediaMath.toFixed(2)
+                response.innerHTML = `Você tirou ${mediaMath.toFixed(2)} em Matemática <br>`
+                return mediaMath
+            }
+        }
+        
+        function calcularBio(){
+            
+            let bioNota1 = Number(document.getElementById('bioNota1').value)
+            let bioNota2 = Number(document.getElementById('bioNota2').value)
+            let response = document.getElementById('resp')
+            response.innerHTML = ``
+            if( bioNota1 > 10 || bioNota2 >10){
+                response.innerHTML += `Coloque um número válido, entre 0 e 10`
+            } else if (bioNota1 <0 || bioNota2 <0){
+                response.innerHTML += `Coloque um número válido, entre 0 e 10`
+            } else {
+                let mediaBio = (bioNota1 + bioNota2)/2
+                let respNotaBio = document.getElementById('respNotaBio')
+                respNotaBio.innerHTML = mediaBio.toFixed(2)
+                response.innerHTML = `Você tirou ${mediaBio.toFixed(2)} em Biologia <br>`
+                return mediaBio.value
+            }
+        }
+        function calcularMediaExatas(){
+            let mediaExatas = (mediaBio + mediaMath)/2
+            response.innerHTML = `Você tirou ${mediaExatas.toFixed(2)} em Exatas <br>`
+        }
+
+    </script>
+</body>
+</html>

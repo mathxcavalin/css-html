@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-size: 1.6em;
+        }
+        table{
+            width: 700px;
+            border-collapse: collapse;
+            margin: auto;
+            position: relative;
+        }
+        thead th{
+            background-color: rgb(201, 199, 199);
+            font-weight: bold;
+        }
+        td, th{
+            height: 30px;
+            border: black 1px solid;
+        }
+        td{
+            padding-left: 10px;
+        }
+        input{
+            display: block;
+            margin: auto;
+            width: 400px;
+            height: 60px;
+            font-size: 1.5em;
+            padding-left: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.307);
+        }
+        button{
+            margin: auto;
+            display: block;
+            margin-top: 15px;
+            border: none;
+            background-color: rgb(92, 205, 92);
+            width: 400px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 1.3em;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.307);
+        }
+        #resp{
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+
+
+
+
+        tbody tr:nth-child(even){
+            background-color: rgb(223, 245, 224);
+        }
+
+        tfoot{
+            background-color: rgb(148, 197, 152);
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Comparação de Estados do Brasil</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50px;">Posição</th>
+                <th>Estado / DF</th>
+                <th >Habitantes</th>
+                <th style="width: 140px;">PIB<br>(bilhões de R$)</th>
+                <th style="width: 130px;">Percentual da população</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td>45 919 000</td>
+                <td>3 500</td>
+                <td>0,219</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td>21 168 000</td>
+                <td>1 157</td>
+                <td>0,101</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td>17 264 000</td>
+                <td>1 170</td>
+                <td>0,082</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td>11 433 000</td>
+                <td>765</td>
+                <td>0,054</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td>11 377 000</td>
+                <td>650</td>
+                <td>0,054</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Santa Catarina</td>
+                <td>7 164 000</td>
+                <td>514</td>
+                <td>0,034</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Distrito Federal</td>
+                <td>3 015 000</td>
+                <td>365</td>
+                <td>0,014</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <th colspan="2">Total dos Estados</th>
+                    <td>117 000 000</td>
+                    <td>8 121</td>
+                    <td>0,558</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+
+    <h1>Login:</h1>
+    <input id="inputName" type="text" placeholder="Digite seu nome:">
+    <br>
+    <input type="text" name="senha" id="inputSenha" placeholder="Digite uma senha:">
+    <button onclick="validarLogin()">Validar</button>
+    <p id="resp"></p>
+
+    <script>
+        
+
+        let name = document.getElementById('inputName')
+        let senha = document.getElementById('inputSenha')
+        let response = document.getElementById('resp')
+        function validarLogin(){
+            
+            if (senha.value == ''){
+                response.innerHTML = `Digite 
+                
+                sua senha (8 caractéres).`
+                senha.focus()
+            } else if(name.value.trim() == ''){
+                response.innerHTML = `Digite seu nome.`
+                name.focus()
+            } else if (senha.value.length < 8){
+                response.innerHTML = `Sua senha deve conter no mínimo 8 caractéres.`
+                senha.focus()
+            } else {
+                response.innerHTML = `Bem Vindo ${name.value}!`
+            }
+        }
+
+
+    </script>
+</body>
+</html>

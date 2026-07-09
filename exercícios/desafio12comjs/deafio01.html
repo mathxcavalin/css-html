@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="number">
+    <p id="resp"></p>
+    <button onclick="verify()">Par ou Ímpar</button>
+    <button onclick="div()">Divisível</button>
+
+    <script>
+        const resp = document.getElementById('resp')
+        let num
+        function verify(){
+            num = +document.getElementById('number').value
+            if (num%2 === 0){
+                resp.innerHTML = `O número ${num} é par.`
+            } else if (num%2 === 1 || num%2 === -1){
+                resp.innerHTML = `O número ${num} é ímpar`
+            } else {
+                resp.innerHTML = 'Números com vírgula não são classificados em ímpar ou par.'
+            }
+            return num.value
+        }
+
+        function div(){
+            if ( num%2 === 0){
+                resp.innerHTML += `<br>2 é o menor número primo múltiplo de ${num}`
+            } else if( num%3 === 0){
+                resp.innerHTML += `<br>3 é o menor número primo múltiplo de ${num}`
+            } else if( num%5 === 0){
+                resp.innerHTML += `<br>5 é o menor número primo múltiplo de ${num}`
+            } else if(num%7 === 0){
+                resp.innerHTML += `<br>7 é o menor número primo múltiplo de ${num}`
+            } else {
+                resp.innerHTML += `<br>O número ${num} não é múltiplo de nenhum número primo menor que 10.`
+            }
+        }
+
+    </script>
+</body>
+</html>

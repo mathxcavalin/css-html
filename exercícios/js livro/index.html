@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .formatacao{
+            width: 100px;
+            height: 60px;
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+            font-size: 2em;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.252);
+        }
+        p{
+            padding: 10px 0px;
+            vertical-align: center;
+        }
+
+        p.exemplo{
+            display: flex;
+            width: 100px;
+            height: 60px;
+            font-size: 2em;
+            text-align: center;
+            border: 1px solid black;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.252);
+        }
+        #ex{
+            font-size: 1.4em;
+            margin-bottom: -30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p id="ex">Exemplo:</p>
+    <div>
+        <p class="exemplo">36</p>
+        <p class="exemplo">*</p>
+        <p class="exemplo">5</p>
+        <p class="exemplo">=</p>
+        <p class="exemplo">180</p>
+    </div>
+
+    <div>
+        <input class="formatacao" type="number" name="" id="num1" >
+        <input class="formatacao" type="text" name="" id="operacao">
+        <input class="formatacao" type="number" name="" id="num2" >
+        <button class="formatacao" onclick="calculate()">=</button>
+        <p id="response" class="formatacao"></p>
+    </div>
+
+    <script>
+        function calculate(){
+            const num1 = +document.getElementById('num1').value
+            const num2 = + document.getElementById('num2').value
+            const operacao = document.getElementById('operacao').value
+            const resp = document.getElementById('response')
+            
+            if(operacao == '+'){
+                resp.innerHTML = num2 + num1
+            } else if (operacao == '-'){
+                resp.innerHTML = num1 - num2
+            } else if (operacao == '*' || operacao == 'x'){
+                resp.innerHTML = num1 * num2
+            } else if (operacao == '/'){
+                resp.innerHTML = num1/num2
+            } else {
+                resp.innerHTML = ``
+            }
+        }
+    </script>
+</body>
+</html>

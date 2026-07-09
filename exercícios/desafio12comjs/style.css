@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 80px;
+    text-align: center;
+    background-image: linear-gradient(to left, black, rgb(55, 0, 0));
+    color: white;
+}
+
+header h1{
+    font-size: clamp(2.5em, 8vw, 3em);
+    padding-bottom: 5px;
+
+}
+
+header p{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover{
+    color: rgb(58, 236, 233);
+    border-radius: 3px;
+    text-decoration: underline;
+}
+
+.paragrafoNormal {
+    margin: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5em;
+    font-size: clamp(1.2em, 4vw, 1.6em);
+}
+
+#img{
+    background-image: url(cordel/imagens/background001.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 100%;
+    height: 600px;
+    background-position: right;
+}
+
+#img2{
+    background-image: url(cordel/imagens/background002.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 95.1vw;
+    height: 600px;
+}
+
+.paragrafoImagem{
+    font-size: clamp(1.2em, 4vw, 1.6em);
+    padding: 200px 30px;
+    line-height: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.paragrafoImagem p{
+    background-color: rgba(0, 0, 0, 0.301);
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 20px;
+    text-shadow: 1px 1px 1px black;
+   
+}
+
+.paragrafoImagem2{
+    padding: 200px 30px;
+    line-height: 1.5em;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.2em, 4vw, 1.6em);
+    text-shadow: 1px 1px 1px black;
+}
+
+.paragrafoImagem2 p {
+    background-color: rgba(0, 0, 0, 0.455);
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 0px 20px;
+}
+
+#questionario {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    padding-bottom: 30px;
+}
+
+.opcao{
+    padding: 10px;
+    display: inline-block;
+    width: 80px;
+}
+
+#opBom:hover{
+    background-color: lightgreen;
+    border-radius: 5px;
+}
+
+#opOk:hover{
+    background-color: rgb(241, 241, 130);
+    border-radius: 5px;
+}
+
+#opRuim:hover{
+    background-color: rgb(248, 70, 70);
+    border-radius: 5px;
+}
+
+#questionario button{
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover{
+    background-color: rgb(83, 250, 116);
+}
+
+#resposta{
+    padding: 20px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#votarnota p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#alinhar {
+    display: flex;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#alinhar input{
+    font-size: 1.1em;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#alinhar button {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid black;
+    border-radius: 0px 05px 05px 0px;
+}
+
+#media{
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+}
+
+footer{
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: rgb(3, 52, 13);
+    color: white;
+}
+
+footer strong:hover{
+    text-decoration: underline;
+}

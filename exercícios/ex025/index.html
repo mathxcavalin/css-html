@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">
+        <label for="sobrenome">Sobrenome: </label>
+        <input type="text" name="sobrenome" id="sobrenome">
+    </form>
+    <p id="resp"></p>
+    <button onclick="verify()">Verificar</button>
+    <script>
+        function verify(){
+            let resp = document.getElementById('resp')
+            let nome = document.getElementById('nome').value
+            let sobrenome = document.getElementById('sobrenome').value
+            resp.innerHTML = `${nome} ${sobrenome}`
+        }
+    </script>
+</body>
+</html>
